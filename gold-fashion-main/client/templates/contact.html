@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block body %}
+<div class="ps-contact ps-section pb-80">
+    <div id="contact-map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjOIk2FPrhXzNJEl28ZexWbVnTu0CSpZU">
+    </script>
+    <script>
+        // map postion
+        const options = {
+            center: new google.maps.LatLng(
+                35.82392712135377, 10.633308847078409
+            ), //Set center.
+            zoom: 13 //The zoom value.
+        };
+
+        // init map
+        const map = new google.maps.Map(document.getElementById('contact-map'), options);
+    </script>
+    <div class="ps-container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+                <div class="ps-section__header mb-50">
+                    <h2 class="ps-section__title" data-mask="Contact">- Contactez-nous</h2>
+                    <form class="ps-contact__form" action="" method="post">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                <div class="form-group">
+                                    <label>Nom et prénom <sub>*</sub></label>
+                                    <input class="form-control" type="text" name="nom_prenom" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                <div class="form-group">
+                                    <label>Email <sub>*</sub></label>
+                                    <input class="form-control" type="email" name="email" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                <div class="form-group mb-25">
+                                    <label>Votre message <sub>*</sub></label>
+                                    <textarea class="form-control" rows="6" required name="message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="ps-btn">Envoyer message<i class="ps-icon-next"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                <div class="ps-section__content">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="ps-contact__block" data-mh="contact-block">
+                                <header>
+                                    <h3>Tunis <span></span></h3>
+                                </header>
+                                <footer>
+                                    <p><i class="fa fa-map-marker"></i> adresse</p>
+                                    <p><i class="fa fa-envelope-o"></i>support@gold-fashion.tn</p>
+                                    <p><i class="fa fa-phone"></i> ( +216 ) 7x xxx xxx - xx xxx xxx</p>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="ps-contact__block" data-mh="contact-block">
+                                <header>
+                                    <h3>Sousse <span></span></h3>
+                                </header>
+                                <footer>
+                                    <p><i class="fa fa-map-marker"></i> adresse</p>
+                                    <p><i class="fa fa-envelope-o"></i>support@gold-fashion.tn</p>
+                                    <p><i class="fa fa-phone"></i> ( +216 ) 7x xxx xxx - xx xxx xxx</p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
